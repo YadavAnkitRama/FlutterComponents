@@ -36,19 +36,18 @@ class _IndexState extends State<Index> with SingleTickerProviderStateMixin {
             Tab(text: 'Travel'),
           ],
         ),
-        title: Title(
-            color: Colors.black,
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Search',
-                labelStyle: TextStyle(
-                  color: Colors.grey,
-                ),
-                focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)),
-              ),
-            )),
         backgroundColor: Colors.indigo[800],
+      ),
+      bottomNavigationBar: Material(
+        color: Colors.indigo[800],
+        child: TabBar(
+          controller: _tabController,
+          tabs: <Widget>[
+            Tab(text: 'Shopping'),
+            Tab(text: 'Furniture'),
+            Tab(text: 'Travel'),
+          ],
+        ),
       ),
       drawer: Drawer(
         child: ListView(

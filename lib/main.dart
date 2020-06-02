@@ -1,10 +1,15 @@
+import 'package:FlutterComponents/screens/furniture.dart';
+import 'package:FlutterComponents/screens/index.dart';
 import 'package:FlutterComponents/screens/login.dart';
 import 'package:FlutterComponents/screens/register.dart';
+import 'package:FlutterComponents/screens/shopping.dart';
+import 'package:FlutterComponents/screens/travel.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Named Routes Demo',
+    debugShowCheckedModeBanner: false,
     // Start the app with the "/" named route. In this case, the app starts
     // on the FirstScreen widget.
     initialRoute: '/',
@@ -12,6 +17,11 @@ void main() {
       '/': (context) => HomeScreen(),
       '/register': (context) => Register(),
       '/login' : (context) => Login(),
+      '/index' : (context) => Index(),
+      '/shopping': (context) => Shopping(),
+      '/furniture' : (context) => Furniture(),
+      '/travel' : (context) => Travel(),
+
     },
   ));
 }

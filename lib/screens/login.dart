@@ -112,7 +112,9 @@ class _LoginState extends State<Login> {
                   color: Colors.green,
                   elevation: 7.0,
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/index');
+                    },
                     child: Center(
                       child: Text(
                         'Login',

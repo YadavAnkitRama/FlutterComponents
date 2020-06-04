@@ -242,7 +242,13 @@ class _FurnitureProfileState extends State<FurnitureProfile> {
                     ],
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: 15.0),
+          listItem('Gift card', Colors.red, Icons.account_box),
+          listItem('Bank card', Color(getColorHexFromStr('#E89300')), Icons.credit_card),
+          listItem('Replacement code', Color(getColorHexFromStr('#FB8662')), Icons.grid_on),
+          listItem('Consulting collection', Colors.blue, Icons.pages),
+          listItem('Customer service', Color(getColorHexFromStr('#ECB800')), Icons.person)
             ],
           )
         ],
@@ -300,6 +306,52 @@ class _FurnitureProfileState extends State<FurnitureProfile> {
               ),
           ],
         ),
+      ),
+    );
+  }
+
+  
+  Widget listItem(String title, Color buttonColor, iconButton) {
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Row(
+        children: <Widget>[
+          Container(
+            height: 50.0,
+            width: 50.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25.0),
+              color: buttonColor.withOpacity(0.3)
+            ),
+            child: Icon(
+              iconButton,
+              color: buttonColor,
+              size: 25.0
+            ),
+          ),
+          SizedBox(width: 25.0),
+          Container(
+            width: MediaQuery.of(context).size.width - 100.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(title,
+                style: TextStyle(
+                  fontFamily: 'Quicksand',
+                  fontSize: 15.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold
+                ),
+                ),
+                Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.black,
+              size: 20.0
+            )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

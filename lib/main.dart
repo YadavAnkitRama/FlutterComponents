@@ -1,4 +1,5 @@
 import 'package:FlutterComponents/screens/furniture.dart';
+import 'package:FlutterComponents/screens/furniture_profile.dart';
 import 'package:FlutterComponents/screens/index.dart';
 import 'package:FlutterComponents/screens/login.dart';
 import 'package:FlutterComponents/screens/register.dart';
@@ -20,6 +21,7 @@ void main() {
       '/index' : (context) => Index(),
       '/shopping': (context) => Shopping(),
       '/furniture' : (context) => Furniture(),
+      '/furnitureprofile' : (context) => FurnitureProfile(),
       '/travel' : (context) => Travel(),
 
     },

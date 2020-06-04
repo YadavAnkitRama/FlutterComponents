@@ -79,6 +79,14 @@ class _IndexState extends State<Index> with SingleTickerProviderStateMixin {
               },
             ),
             ListTile(
+              title: Text('Furniture Profile'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              leading: Icon(Icons.work),
+              onTap: () {
+                Navigator.pushNamed(context, '/furnitureprofile');
+              },
+            ),
+            ListTile(
               title: Text('Travel UI'),
               trailing: Icon(Icons.keyboard_arrow_right),
               leading: Icon(Icons.fast_forward),
